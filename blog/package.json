@@ -4,14 +4,22 @@
   "private": true,
   "dependencies": {
     "@material-ui/icons": "4.5.1",
+    "@okta/jwt-verifier": "1.0.0",
     "@okta/okta-react": "1.2.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "body-parser": "1.18.3",
+    "cors": "2.8.4",
+    "dotenv": "8.1.0",
+    "epilogue": "0.7.1",
+    "express": "4.16.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "5.1.2",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "sequelize": "4.44.3",
+    "sqlite3": "4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.3"
   }
 }

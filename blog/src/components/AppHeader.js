@@ -1,15 +1,26 @@
 import React from "react";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, withStyles } from "@material-ui/core";
+import LoginButton from './LoginButton';
 
-const AppHeader = () => (
+const styles = {
+    flex:{
+        flex:1,
+    },
+};
+
+const AppHeader = ({classes}) => (
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
         My React Blog
       </Typography>
+
+      <div className={classes.flex} />
+      <LoginButton />
+
     </Toolbar>
   </AppBar>
 );
 
 
-export default AppHeader;
+export default withStyles(styles) (AppHeader);
