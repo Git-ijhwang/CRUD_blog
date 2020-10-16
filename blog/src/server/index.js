@@ -9,7 +9,7 @@ const OktaJwtVerifier = require('@okta/jwt-verifier');
 
 const oktaJwtVerifier = new OktaJwtVerifier({
     clientId: process.env.REACT_APP_OKTA_CLIENT_ID,
-    issuer: `@{process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`,
+    issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`,
 });
 
 const app = express();
@@ -47,10 +47,10 @@ epilogue.resource({
     endpoints: ['/posts', '/posts/:id'],
 });
 
-const post = process.env.SERVER_PORT || 3001;
+const port = process.env.SERVER_PORT || 3001;
 
 database.sync().then(() => {
     app.listen(port, () => {
-        console.log(`Listening on Port @{port}`);
+        console.log(`Listening on Port ${port}`);
     });
 });
