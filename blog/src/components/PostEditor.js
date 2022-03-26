@@ -114,34 +114,30 @@ const styles = theme => ({
 
 const PostEditor = ({ classes, post, onSave, history }) => (
   <Form initialValues={post} onSubmit={onSave}>
+
     {({ handleSubmit }) => (
-      <Modal
-        className={classes.modal}
-        onClose={() => history.goBack()}
-        open
-      >
+
+      <Modal className={classes.modal} onClose={() => history.goBack()} open >
+
         <Card className={classes.modalCard}>
           <form onSubmit={handleSubmit}>
             <CardContent className={classes.modalCardContent}>
+
               <Field name="title">
                 {({ input }) => <TextField label="Title" autoFocus {...input} />}
               </Field>
+
               <Field name="body">
-                {({ input }) => (
-                  <TextField
-                    className={classes.marginTop}
-                    label="Body"
-                    multiline
-                    rows={4}
-                    {...input}
-                  />
-                )}
+                {({ input }) => <TextField className={classes.marginTop} label="Body" multiline rows={4} {...input} />}
               </Field>
+
             </CardContent>
+
             <CardActions>
               <Button size="small" color="primary" type="submit">Save</Button>
               <Button size="small" onClick={() => history.goBack()}>Cancel</Button>
             </CardActions>
+
           </form>
         </Card>
       </Modal>

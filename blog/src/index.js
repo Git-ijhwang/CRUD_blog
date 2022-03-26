@@ -9,8 +9,9 @@ import * as serviceWorker from './serviceWorker';
 
 const oktaConfig = {
   issuer: `${process.env.REACT_APP_OKTA_ORG_URL}/oauth2/default`,
-  redirect_uri: `${window.location.origin}/implicit/callback`,
-  client_id: `${process.env.REACT_APP_OKTA_CLIENT_ID}`,
+  redirect_uri: `${window.location.origin}/login/callback`,
+  client_id: process.env.REACT_APP_OKTA_CLIENT_ID,
+
 };
 
 ReactDOM.render(
@@ -20,12 +21,6 @@ ReactDOM.render(
     </Security>
   </BrowserRouter>,
 
-
-
-
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
   document.getElementById('root'),
 );
 

@@ -9,19 +9,23 @@ const styles = {
     },
 };
 
-const AppHeader = ({classes}) => (
+const AppHeader = ({ classes }) => (
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
         My React Blog
       </Typography>
 
-      <Button color="inherit" component={Link} to="/">Home</Button>
-      <Button color="inherit" component={Link} to="/posts">Posts Manager</Button>
+      <Button color="inherit" component={Link} to="/">
+        Home
+      </Button>
+
+      <Button color="inherit" component={Link} to="/posts">
+        Posts Manager
+      </Button>
 
       <div className={classes.flex} />
       <LoginButton />
-
     </Toolbar>
   </AppBar>
 );
